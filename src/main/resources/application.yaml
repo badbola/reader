@@ -1,0 +1,46 @@
+server:
+  port: 8080
+  undertow:
+    accesslog:
+      enabled: true
+      dir: '/var/log/natWest'
+  compression:
+    enabled: true
+  error:
+    whitelabel:
+      enabled: false
+  http2:
+    enabled: true
+  servlet:
+    application-display-name: NatWest Transaction Reader
+    encoding:
+      charset:
+  shutdown: graceful
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: INFO
+        type:
+          descriptor:
+            sql:
+              BasicBinder: INFO
+
+
+natWestTransactionReader:
+  log-file-path: '/var/log/natWest/reader.log'
+  swagger:
+    app-name: NatWest Transaction Reader
+    realm: api-realm
+    title: NatWest Transaction Reader API
+    description: Documentation of NatWest Transaction Reader API.
+    term-of-service-url: Terms of service
+    version: 1.0.0
+    contact-name: Divyanshu
+    contact-email: divyanshuok@outlook.com
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
