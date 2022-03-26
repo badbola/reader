@@ -28,7 +28,7 @@ logging:
               BasicBinder: INFO
 
 
-natWestTransactionReader:
+natwestTransactionReader:
   log-file-path: '/var/log/natWest/reader.log'
   swagger:
     app-name: NatWest Transaction Reader
@@ -39,6 +39,8 @@ natWestTransactionReader:
     version: 1.0.0
     contact-name: Divyanshu
     contact-email: divyanshuok@outlook.com
+
+  write-service-url: http://localhost:9000
 
 spring:
   mvc:

@@ -24,18 +24,18 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig {
 
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select().apis(
-                        RequestHandlerSelectors.any()/*withMethodAnnotation(ApiOperation.class)*/).paths(PathSelectors.any())
-                .build().apiInfo(apiInfo()).useDefaultResponseMessages(false);
-    }
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.any()/* withMethodAnnotation(ApiOperation.class) */)
+				.paths(PathSelectors.any()).build().apiInfo(apiInfo()).useDefaultResponseMessages(false);
+	}
 
-    private ApiInfo apiInfo() {
+	private ApiInfo apiInfo() {
 
-        return new ApiInfo("NatWest Api Documentation", "REST API for NatWest read application", "1.0",
-                "Terms of service", ApiInfo.DEFAULT_CONTACT, "NatWest", null, new ArrayList<>());
-    }
+		return new ApiInfo("NatWest Api Documentation", "REST API for NatWest read application", "1.0",
+				"Terms of service", ApiInfo.DEFAULT_CONTACT, "NatWest", null, new ArrayList<>());
+	}
 
 
 }

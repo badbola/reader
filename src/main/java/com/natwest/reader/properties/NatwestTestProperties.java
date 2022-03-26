@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Configuration
-@ConfigurationProperties(prefix = "natwest.read")
+@ConfigurationProperties(prefix = "natwest-transaction-reader")
 public class NatwestTestProperties {
 
     private String writeServiceUrl;
